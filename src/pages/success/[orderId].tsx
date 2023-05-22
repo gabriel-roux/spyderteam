@@ -7,10 +7,6 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useContext, useEffect, useState } from "react"
 
-interface SuccessProps {
-    order: Order
-}
-
 export default function Success() {
 
     const { user } = useContext(AuthContext)
@@ -29,11 +25,6 @@ export default function Success() {
             const response = await fetch(`https://spyder-team.herokuapp.com/orders/${orderId}`).then(res => res.json())
 
             const { status, order } = response
-
-            // if (status !== 200) {
-            //     router.push('/loja');
-            //     return;
-            // }
 
             setOrder(order);
         }
