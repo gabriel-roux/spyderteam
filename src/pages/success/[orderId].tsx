@@ -30,10 +30,10 @@ export default function Success() {
 
             const { status, order } = response
 
-            if (status !== 200) {
-                router.push('/loja');
-                return;
-            }
+            // if (status !== 200) {
+            //     router.push('/loja');
+            //     return;
+            // }
 
             setOrder(order);
         }
@@ -80,7 +80,7 @@ export default function Success() {
             </p>
 
             <Link href="/loja">
-                Voltal ao catálogo
+                Voltar ao catálogo
             </Link>
 
         </SuccessContainer>
