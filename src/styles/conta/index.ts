@@ -7,6 +7,12 @@ export const ContaContainer = styled('div', {
     width: '100%',
     maxWidth: '1120px',
     margin: '10rem auto',
+
+    '@media(max-width: 768px)': {
+      flexDirection: 'column',
+      gap: '2rem',
+      margin: '12rem auto',
+    }
   });
   
   export const ContaSidebar = styled('div', {
@@ -159,6 +165,12 @@ export const ContaContainer = styled('div', {
     borderRadius: '10px',
     margin: '$s',
     padding: '$s',
+
+    '@media(max-width: 768px)': {
+      padding: '$s',
+      maxWidth: '100vw',
+      margin: '1rem 0',
+    }
   });
   
   export const OrderTitle = styled('h2', {

@@ -22,7 +22,14 @@ export const Banner = styled('div', {
         height: '100vh',
         background: 'linear-gradient(180deg, rgba(20, 1, 23, 0.3) 0%, #140117 100%)',
 
+
+    
         padding: '0rem 8rem',
+    
+        '@media screen and (max-width: 768px)': {
+            display: 'none',
+            padding: '0rem 1rem',
+        },
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'center',
@@ -34,6 +41,11 @@ export const Banner = styled('div', {
             fontSize: '5rem',
             lineHeight: '97px',
             maxWidth: '8ch',
+
+            '@media screen and (max-width: 768px)': {
+                fontSize: '3rem',
+                lineHeight: '3.5rem',
+            },
             /* identical to box height */
 
             color: '#FFF',
@@ -86,7 +98,7 @@ export const Banner = styled('div', {
 export const NewCollection = styled('section', {
 
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '2rem auto',
 
 })
@@ -201,7 +213,7 @@ export const NewCollectionContent = styled('div', {
 export const BuyNow = styled('section', {
 
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '5rem auto',
 
 })
@@ -212,6 +224,10 @@ export const BuyNowContent = styled('div', {
     alignItems: 'center',
     justifyItems: 'flex-start',
     flexDirection: 'column',
+
+    '@media screen and (max-width: 768px)': {
+        padding: '0rem 2rem',
+    },
 
     h1: {
         fontFamily: 'Libre Franklin',
@@ -234,12 +250,21 @@ export const BuyNowContent = styled('div', {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        '@media screen and (max-width: 768px)': {
+            width: '100%',
+            height: 'auto',
+            flexDirection: 'column',
+        },
         borderRadius: '24px',
         overflow: 'hidden',
 
         '.imageContainer': {
             width: '50%',
             height: '100%',
+            '@media screen and (max-width: 768px)': {
+                width: '100%',
+                height: 400,
+            },
             background: 'linear-gradient(180deg, #DB00FF, #9C37FD)',
             display: 'flex',
             alignItems: 'center',
@@ -256,12 +281,21 @@ export const BuyNowContent = styled('div', {
             width: '50%',
             height: '100%',
 
+            '@media screen and (max-width: 768px)': {
+                width: '90%',
+                height: 'auto',
+            },
+
             h2: {
                 fontFamily: 'Libre Franklin',
                 fontStyle: 'normal',
                 fontWeight: 600,
                 fontSize: '2rem',
                 lineHeight: '108px',
+
+                '@media screen and (max-width: 768px)': {
+                    lineHeight: 1,
+                }
             },
 
             p: {
@@ -269,6 +303,11 @@ export const BuyNowContent = styled('div', {
                 fontStyle: 'normal',
                 fontWeight: 600,
                 fontSize: '1rem',
+
+                '@media screen and (max-width: 768px)': {
+                    fontSize: '1.25rem',
+                    lineHeight: '2.5rem',
+                }
             },
 
             '.colors': {
@@ -460,17 +499,18 @@ export const Newsletters = styled('section', {
 
 export const News = styled('section', {
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '5rem auto',
 
     '.latestPublications': {
         display: 'grid',
         width: '100%',
-        maxWidth: '1320px',
+        maxWidth: '1120px',
         gap: '2rem',
         gridTemplateColumns: 'repeat(3, 1fr)',
         '@media screen and (max-width: 768px)': {
             gridTemplateColumns: 'repeat(1, 1fr)',
+            margin: '2rem 0',
         },
 
         '.publication': {
@@ -551,6 +591,11 @@ export const NewsContent = styled('div', {
         lineHeight: '108px',
         /* identical to box height */
     
+        '@media screen and (max-width: 768px)': {
+            fontSize: '4rem',
+            lineHeight: '3.5rem',
+        },
+
         color: '#FFFFFF',
     },
 })

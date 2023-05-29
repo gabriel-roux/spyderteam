@@ -23,6 +23,13 @@ export const LoginCard = styled('div', {
   width: '100%',
   background: '#270D27',
   maxWidth: '800px',
+
+  '@media(max-width: 768px)': {
+    flexDirection: 'column',
+    marginTop: '35rem',
+    marginBottom: '35rem',
+    maxWidth: '100%',
+  },
 });
 
 export const Logo = styled(Image, {
@@ -110,6 +117,10 @@ export const Button = styled('button', {
     justifyContent: 'center',
     alignItems: 'center',
     transition: 'all 300ms ease',
+
+    '@media(max-width: 768px)': {
+        marginTop: '1rem',
+    },
 
     '&:hover': {
         backgroundColor: '$purple-dark',

@@ -5,8 +5,16 @@ export const ProductContainer = styled('div', {
     gridTemplateColumns: '1fr 1fr',
     alignItems: 'stretch',
     gap: '4rem',
-    maxWidth: 1180,
-    margin: '10rem auto'
+    maxWidth: 1120,
+    margin: '10rem auto',
+    
+    '@media(max-width: 768px)': {
+        gridTemplateColumns: 'unset',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '2rem',
+        margin: '12rem auto',
+    }
 })
 
 export const ImageContainer = styled('div', {
@@ -20,8 +28,16 @@ export const ImageContainer = styled('div', {
     alignItems: 'center',
     justifyContent: 'center',
 
+    '@media(max-width: 768px)': {
+        maxWidth: '100vw',
+    },
+    
     img: {
-        objectFit: 'cover'
+        objectFit: 'cover',
+        
+        '@media(max-width: 768px)': {
+            maxWidth: '100vw',
+        },
     }
 })
 

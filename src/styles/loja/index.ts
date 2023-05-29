@@ -3,7 +3,7 @@ import { styled } from "../config/stitches.config"
 export const ProductsContainer = styled('section', {
 
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '5rem auto',
 
     h2: {
@@ -19,6 +19,9 @@ export const ProductsContent = styled('div', {
 
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
+    '@media(max-width: 768px)': {
+        gridTemplateColumns: 'repeat(1, 1fr)',
+    },
     gap: '3rem',
 
 })
@@ -93,7 +96,7 @@ export const LancamentosContainer = styled('section', {
 
     display: 'flex',
     width: '100%',
-    maxWidth: 'calc(100vw - ((100vw - 1320px) / 2))',
+    maxWidth: 'calc(100vw - ((100vw - 1120px) / 2))',
     marginLeft: 'auto',
     minHeight: 656,
     marginTop: '12rem',

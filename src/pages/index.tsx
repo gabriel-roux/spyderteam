@@ -159,24 +159,6 @@ export default function Home() {
                       <p>{product.price}</p>
                     </div>
 
-                    <div className='colors'>
-                      <span style={{ background: '#333333' }} />
-                      <span style={{ background: '#FD6565' }} />
-                      <span style={{ background: '#F9B756' }} />
-                      <span style={{ background: 'purple' }} />
-                    </div>
-
-                    <div className='sizeButtons'>
-                      <h3>Selecione o tamanho:</h3>
-                      <div>
-                        <button className='active'>P</button>
-                        <button>M</button>
-                        <button>G</button>
-                        <button>GG</button>
-                        <button>XG</button>
-                      </div>
-                    </div>
-
                     <div className='buyButtons'>
                       <button>
                         Adicionar no carrinho

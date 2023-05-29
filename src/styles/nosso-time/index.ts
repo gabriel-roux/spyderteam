@@ -2,7 +2,7 @@ import { styled } from "../config/stitches.config";
 
 export const Games  = styled('section', {
 
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     width: '100%',
     margin: '4rem auto'
 
@@ -13,6 +13,11 @@ export const GamesContainer = styled('div', {
     display: 'grid',
     gridTemplateColumns: 'repeat(6, 1fr)',
 
+    '@media(max-width: 768px)': {
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '1rem'
+    },
+
     '.box': {
         position: 'relative',
         overflow: 'hidden',
@@ -22,7 +27,7 @@ export const GamesContainer = styled('div', {
             borderRadius: '12px',
             top: 0,
             left: 0,
-            width: '91%',
+            width: '100%',
             height: '100%',
             position: 'absolute',
             background: 'linear-gradient(#00000000, #000)'
@@ -59,7 +64,7 @@ export const GamesContainer = styled('div', {
 export const OurTeam = styled('section', {
 
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '4rem auto'
 
 })
@@ -79,6 +84,12 @@ export const OurTeamContent = styled('div', {
         lineHeight: '108px',
         /* identical to box height */
     
+        '@media(max-width: 768px)': {
+            fontSize: '3rem',
+            lineHeight: '3rem',
+            textAlign: 'center'
+        },
+
         color: '#FFFFFF',
     },
 
@@ -86,13 +97,22 @@ export const OurTeamContent = styled('div', {
 
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 1fr)',
+        '@media(max-width: 768px)': {
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            padding: '0 1rem',
+            gap: '1rem'
+        },
         gap: '1.5rem',
 
         '.box': {
             img: {
                 width: '250px',
                 height: '300px',
-                borderRadius: '12px'
+                borderRadius: '12px',
+                '@media(max-width: 768px)': {
+                    width: '180px',
+                    height: '220px',
+                }
             },
 
             h2: {

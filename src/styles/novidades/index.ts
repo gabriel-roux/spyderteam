@@ -5,8 +5,11 @@ export const NovidadesContainer = styled('section', {
 
     width: '100%',
     maxWidth: '1120px',
-    margin: '8rem auto'
+    margin: '8rem auto',
 
+    '@media(max-width: 768px)': {
+        margin: '12rem auto',
+    }
 })
 
 export const NovidadesContent = styled('div', {
@@ -15,13 +18,23 @@ export const NovidadesContent = styled('div', {
     alignItems: 'flex-start',
     justifyContent: 'space-between',
 
+    '@media(max-width: 768px)': {
+        flexDirection: 'column',
+        gap: '1rem'
+    },
+
 })
 
 export const NovidadesPosts = styled('div', {
 
     width: '65%',
     paddingRight: '2rem',
-    borderRight: '1px solid #333'
+    borderRight: '1px solid #333',  
+
+    '@media(max-width: 768px)': {
+        width: '100%',
+        borderRight: 0,
+    }
 
 })
 
@@ -68,6 +81,10 @@ export const Post = styled('div', {
             borderRadius: 8,
             height: 450,
             objectFit: 'cover', 
+
+            '@media(max-width: 768px)': {
+                height: 300,
+            }
         },
 
         p: {
@@ -112,6 +129,11 @@ export const UltimosPosts = styled('div', {
     width: '30%',
     borderRadius: 12,
     background: 'rgba(1, 0, 1, 0.4)',
+
+    '@media(max-width: 768px)': {
+        width: '100%',
+        marginTop: '2rem'
+    },
 
     header: {
 

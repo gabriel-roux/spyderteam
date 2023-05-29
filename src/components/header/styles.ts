@@ -14,9 +14,8 @@ export const HeaderComponent = styled('header', {
 export const HeaderContainer = styled('div', {
 
     width: '100%',
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     margin: '0 auto',
-
 })
 
 export const HeaderContent = styled('div', {
@@ -26,6 +25,11 @@ export const HeaderContent = styled('div', {
     alignItems: 'center',
     width: '100%',
     height: '100%',
+
+    '@media(max-width: 768px)': {
+        flexDirection: 'column',
+        gap: '1rem'
+    },
 
     '.firstContent': {
         display: 'flex',
@@ -55,6 +59,10 @@ export const HeaderContent = styled('div', {
     '.secondContent': {
         display: 'flex',
         alignItems: 'center',
+        '@media(max-width: 768px)': {
+            flexDirection: 'column',
+            gap: '1rem'
+        },
         gap: '1rem',
 
         '.linksContent': {
@@ -63,6 +71,9 @@ export const HeaderContent = styled('div', {
             gap: '1rem', 
 
             a: {
+                '@media(max-width: 768px)': {
+                    display: 'none'
+                },
                 fontFamily: 'Libre Franklin',
                 fontStyle: 'normal',
                 fontWeight: 600,

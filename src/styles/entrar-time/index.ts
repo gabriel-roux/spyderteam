@@ -21,6 +21,12 @@ export const PartnersContent = styled('div', {
         fontWeight: 800,
         fontSize: '62px',
         textAlign: 'center',
+
+        '@media(max-width: 768px)': {
+            fontSize: '2.5rem',
+            lineHeight: '3rem',
+            textAlign: 'center'
+        },
         /* identical to box height */
     
         color: '#FFFFFF',

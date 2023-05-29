@@ -2,7 +2,7 @@ import { styled } from "@/styles/config/stitches.config";
 import Image from "next/image";
 
 export const FooterContainer = styled('footer', {
-    maxWidth: '1320px',
+    maxWidth: '1120px',
     width: '100%',
     margin: '0 auto'
 })
@@ -17,6 +17,11 @@ export const StyledFooter = styled('div', {
     fontSize: '14px',
     lineHeight: '20px',
     color: '#4A4A4A',
+
+    '@media(max-width: 768px)': {
+        flexDirection: 'column',
+        gap: '2rem',
+    }
   });
   
 export const LeftSection = styled('div', {
