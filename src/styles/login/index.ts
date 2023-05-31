@@ -10,6 +10,11 @@ export const PageContainer = styled('div', {
     fontSize: '16px',
     lineHeight: '24px',
     color: '#4A4A4A',
+
+    '@media(max-width: 768px)': {
+      marginBottom: '5rem',
+      height: '100%',
+    },
   });
   
 export const LoginCard = styled('div', {
@@ -26,8 +31,6 @@ export const LoginCard = styled('div', {
 
   '@media(max-width: 768px)': {
     flexDirection: 'column',
-    marginTop: '35rem',
-    marginBottom: '35rem',
     maxWidth: '100%',
   },
 });

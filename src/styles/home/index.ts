@@ -192,12 +192,17 @@ export const NewCollectionContent = styled('div', {
         alignItems: 'center',
         gap: '1rem',
 
+        '@media screen and (max-width: 768px)': {
+            flexDirection: 'column',
+            gap: '2rem'
+        },
+
         '.firstImage': {
             display: 'flex',
             alignItems: 'flex-end',
             height: 500,
         },
-
+        
         '.secondImage': {
             display: 'flex',
             alignItems: 'flex-start',
