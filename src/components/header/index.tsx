@@ -1,12 +1,11 @@
-import { HeaderComponent, HeaderContainer, HeaderContent, StyledCartItem, StyledCheckoutButton, StyledCouponInput, StyledCouponInputWrapper, StyledPopup, StyledProductImage, StyledProductInfo, StyledQuantity, StyledTotal } from "./styles";
+import { HeaderComponent, HeaderContainer, HeaderContent, HeaderMenu, StyledCartItem, StyledCheckoutButton, StyledCouponInput, StyledCouponInputWrapper, StyledPopup, StyledProductImage, StyledProductInfo, StyledQuantity, StyledTotal } from "./styles";
 import Logo from '@/assets/logo.png'
 import Image from "next/image";
-import { ArrowsLeftRight, Minus, Plus, ShoppingCartSimple, User } from "phosphor-react";
+import { ArrowsLeftRight, List, Minus, Plus, ShoppingCartSimple, User, X } from "phosphor-react";
 import Link from "next/link";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import { CartContext } from "@/context/cart/context";
-import { it } from "node:test";
 import { AuthContext } from "@/context/auth/context";
 
 const ShoppingCart = () => {
@@ -137,6 +136,7 @@ const ShoppingCart = () => {
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     const handleClick = () => {
         setIsOpen(!isOpen);
@@ -200,11 +200,50 @@ export function Header() {
                             <button onClick={() => user?.email ? router.push('/conta') : router.push('/login')}>
                                 <User size={26} />
                             </button>
+                            
+                            <button onClick={() => setOpenMenu(true)} className="desactive">
+                                <List size={26} />
+                            </button>
+
                         </div>
                     </div>
 
                 </HeaderContent>
             </HeaderContainer>
+            {
+                openMenu && <HeaderMenu>
+                    <div className="menuContent">
+                        <header>
+                            <p>Menu</p>
+                            <button onClick={() => setOpenMenu(false)}>
+                                <X size={26} />
+                            </button>
+                        </header>
+                        <ul>
+                            <li>
+                                <Link href="nosso-time">
+                                TODO NOSSO TIME
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="novidades">
+                                NOVIDADES
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="entrar-time">
+                                FAÇA PARTE DO TIME
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="patrocinadores">
+                                PATROCINADORES
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </HeaderMenu>
+            }
         </HeaderComponent>
 
     )

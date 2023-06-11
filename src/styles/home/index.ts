@@ -152,6 +152,10 @@ export const NewCollectionContent = styled('div', {
 
             color: '#747474',
             marginBottom: '1rem',  
+
+            '@media screen and (max-width: 768px)': {
+                width: '100%',
+            },
         },
 
         ul: {

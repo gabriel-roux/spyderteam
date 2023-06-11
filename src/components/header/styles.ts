@@ -103,7 +103,13 @@ export const HeaderContent = styled('div', {
                 '&:hover': {
                     color: '#fff'
                 }
-            }
+            },
+
+            '.desactive': {
+                '@media(min-width: 768px)': {
+                    display: 'none'
+                },
+              }
         }
     }
 
@@ -250,3 +256,64 @@ export const StyledCheckoutButton = styled('button', {
     borderColor: '$purple-base',
   },
   });
+
+
+  export const HeaderMenu = styled('div', {
+    width: '100vw',
+    height: '100vh',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    backgroundColor: '$black-purple',
+    zIndex: 100,
+
+    '.menuContent': {
+      padding: '1rem',
+
+      header: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: '1rem',
+
+        p: {
+          fontFamily: 'Libre Franklin',
+          fontStyle: 'normal',
+          fontWeight: 600,
+          fontSize: '1.25rem',
+          lineHeight: '141.69%',
+          color: '#CDA7D3',
+        },
+
+        button: {
+          all: 'unset',
+          cursor: 'pointer',
+          color: '#FFF',
+        }
+      },
+
+      ul: {
+        listStyle: 'none',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+
+        li: {
+          a: {
+            fontFamily: 'Libre Franklin',
+            fontStyle: 'normal',
+            fontWeight: 600,
+            fontSize: '1.25rem',
+            lineHeight: '141.69%',
+            color: '#FFF',
+            textDecoration: 'none',
+            transition: 'all 300ms ease',
+
+            '&:hover': {
+              color: '#fff'
+            }
+          }
+        }
+      }
+    }
+  })
