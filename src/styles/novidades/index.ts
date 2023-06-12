@@ -34,6 +34,7 @@ export const NovidadesPosts = styled('div', {
     '@media(max-width: 768px)': {
         width: '100%',
         borderRight: 0,
+        paddingRight: 0
     }
 
 })

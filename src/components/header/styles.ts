@@ -37,7 +37,12 @@ export const HeaderContent = styled('div', {
         gap: '.5rem',
 
         img: {
-            objectFit: 'contain'
+            objectFit: 'contain',
+
+            '@media(max-width: 768px)': {
+              width: 270,
+              height: 50,
+            }
         },
 
         a: {
