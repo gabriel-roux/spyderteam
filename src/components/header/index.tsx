@@ -221,22 +221,22 @@ export function Header() {
                         </header>
                         <ul>
                             <li>
-                                <Link href="nosso-time">
+                                <Link onClick={() => setOpenMenu(false)} href="nosso-time">
                                 TODO NOSSO TIME
                                 </Link>
                             </li>
                             <li>
-                                <Link href="novidades">
+                                <Link onClick={() => setOpenMenu(false)} href="novidades">
                                 NOVIDADES
                                 </Link>
                             </li>
                             <li>
-                                <Link href="entrar-time">
+                                <Link onClick={() => setOpenMenu(false)} href="entrar-time">
                                 FAÇA PARTE DO TIME
                                 </Link>
                             </li>
                             <li>
-                                <Link href="patrocinadores">
+                                <Link onClick={() => setOpenMenu(false)} href="patrocinadores">
                                 PATROCINADORES
                                 </Link>
                             </li>
