@@ -147,6 +147,10 @@ export const StyledPopup = styled('div', {
     zIndex: 100,
     color: 'white',
 
+    '@media(max-width: 768px)': {
+      width: 290,
+    },
+
     h2: {
       marginBottom: '1rem',
       fontFamily: 'Libre Franklin',
