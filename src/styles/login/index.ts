@@ -39,7 +39,12 @@ export const Logo = styled(Image, {
   height: '500px',
   width: '400px',
   objectFit: 'cover',
-  borderRadius: '12px'
+  borderRadius: '12px',
+
+  '@media(max-width: 768px)': {
+    height: '330px',
+    width: '320px',
+  }
 });
 
 export const LoginForm = styled('form', {
