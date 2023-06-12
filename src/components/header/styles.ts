@@ -149,6 +149,7 @@ export const StyledPopup = styled('div', {
 
     '@media(max-width: 768px)': {
       width: 290,
+      left: '-145px',
     },
 
     h2: {
