@@ -28,7 +28,7 @@ export const Banner = styled('div', {
     
         '@media screen and (max-width: 768px)': {
             display: 'none',
-            padding: '0rem 1rem',
+            padding: '0rem 0rem',
         },
         display: 'flex',
         alignItems: 'flex-start',

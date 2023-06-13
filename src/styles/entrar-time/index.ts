@@ -23,7 +23,7 @@ export const PartnersContent = styled('div', {
         textAlign: 'center',
 
         '@media(max-width: 768px)': {
-            fontSize: '2.5rem',
+            fontSize: '2rem',
             lineHeight: '3rem',
             textAlign: 'center'
         },
