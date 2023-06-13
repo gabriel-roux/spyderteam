@@ -13,8 +13,9 @@ import { ProductProps } from '@/@types/product'
 import { BlogProps } from '@/@types/blog'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { CartContext } from '@/context/cart/context'
 interface HomeProps {
   products: {
     id: string
@@ -31,6 +32,7 @@ export default function Home() {
   const [posts, setPosts] = useState<BlogProps[]>([]);
 
   const router = useRouter();
+  const { handleAction } = useContext(CartContext)
 
   useEffect(() => {
     const fetchProductsAndPosts = async () => {
@@ -159,20 +161,29 @@ export default function Home() {
                       <h2>
                         {product.name}
                       </h2>
+                      <p style={{
+                        fontWeight: 'lighter',
+                      }}>{product.description}</p>
                       <p>{product.price}</p>
                     </div>
 
                     <div className='buyButtons'>
-                      <button>
-                        Adicionar no carrinho
-                      </button>
                       <button
                         style={{
                           background: '#270D27',
                           color: '#FFF'
                         }}
-                        onClick={() => router.push('/loja')}
-                      >
+                        onClick={() => handleAction({
+                          type: 'ADD_ITEM', payload: {
+                              product,
+                              quantity: 1
+                          }
+                      },
+                          {
+                              product,
+                              quantity: 1
+                          }
+                      )}                      >
                         Comprar agora
                       </button>
                     </div>
