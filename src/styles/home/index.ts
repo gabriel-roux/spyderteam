@@ -67,6 +67,10 @@ export const Banner = styled('div', {
             maxWidth: '75ch',
             /* identical to box height */
 
+            '@media screen and (max-width: 768px)': {
+                fontSize: '.875rem',
+                maxWidth: '40ch',
+            },
             color: '#FFF',
 
         },
@@ -211,12 +215,14 @@ export const NewCollectionContent = styled('div', {
             display: 'flex',
             alignItems: 'flex-start',
             height: 500,
-        }
+        },
 
-    }
-
-
-
+        img: {
+            '@media screen and (max-width: 768px)': {
+                width: 325,
+            },
+        },
+    },
 })
 
 export const BuyNow = styled('section', {
@@ -591,6 +597,7 @@ export const NewsContent = styled('div', {
     alignItems: 'center',
     justifyItems: 'flex-start',
     flexDirection: 'column',
+    margin: '2rem 0',
 
     h1: {
         fontFamily: 'Libre Franklin',
@@ -601,7 +608,7 @@ export const NewsContent = styled('div', {
         /* identical to box height */
     
         '@media screen and (max-width: 768px)': {
-            fontSize: '4rem',
+            fontSize: '3.5rem',
             lineHeight: '3.5rem',
         },
 

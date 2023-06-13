@@ -99,7 +99,7 @@ export const OurTeamContent = styled('div', {
         gridTemplateColumns: 'repeat(4, 1fr)',
         '@media(max-width: 768px)': {
             gridTemplateColumns: 'repeat(2, 1fr)',
-            padding: '0 1rem',
+            padding: '0',
             gap: '1rem'
         },
         gap: '1.5rem',

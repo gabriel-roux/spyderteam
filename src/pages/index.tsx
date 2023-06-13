@@ -14,6 +14,7 @@ import { BlogProps } from '@/@types/blog'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 interface HomeProps {
   products: {
     id: string
@@ -28,6 +29,8 @@ interface HomeProps {
 export default function Home() {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [posts, setPosts] = useState<BlogProps[]>([]);
+
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProductsAndPosts = async () => {
@@ -103,7 +106,7 @@ export default function Home() {
                 Apresentando a nova coleção de roupas da Spyder Team - uma mistura perfeita de estilo e funcionalidade projetada para jogadores e fãs de e-sports.
               </p>
 
-              <button>
+              <button onClick={() => router.push('/loja')}>
                 VER MAIS <ArrowRight size={20} />
               </button>
             </div>
@@ -168,6 +171,7 @@ export default function Home() {
                           background: '#270D27',
                           color: '#FFF'
                         }}
+                        onClick={() => router.push('/loja')}
                       >
                         Comprar agora
                       </button>
@@ -178,7 +182,7 @@ export default function Home() {
 
             }
 
-            <Button>VER MAIS</Button>
+            <Button onClick={() => router.push('/loja')}>VER MAIS</Button>
           </BuyNowContent>
         </BuyNow>
 
@@ -243,7 +247,7 @@ export default function Home() {
             }
           </div>
           <NewsContent>
-            <Button>
+            <Button onClick={() => router.push('/novidades')}>
               VER MAIS
             </Button>
           </NewsContent>
