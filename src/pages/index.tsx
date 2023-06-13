@@ -161,10 +161,10 @@ export default function Home() {
                       <h2>
                         {product.name}
                       </h2>
+                      <p>{product.price}</p>
                       <p style={{
                         fontWeight: 'lighter',
                       }}>{product.description}</p>
-                      <p>{product.price}</p>
                     </div>
 
                     <div className='buyButtons'>
